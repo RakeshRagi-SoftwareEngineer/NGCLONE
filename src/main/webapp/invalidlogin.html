@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="logsign.css">
+    <style>
+   h5{
+   color:red;
+   display:flex;
+   align-items:center;
+   justify-content:center;
+   font-size:17px;
+   }
+   
+    .form-group img{
+position: relative;
+width: 20px;
+left: 340px;
+bottom:35px;
+cursor: pointer;
+}
+   </style>
+</head>
+<body>
+    <div class="loginsign">
+    <div class="container" id="auth-container">
+        <div id="login-form">
+        <form action="loginpage" method="Get"> 
+       <h5>Please enter a valid details to Login...</h5>        
+            <h2>Log In</h2>
+            <div class="form-group">
+                <label for="login-email">Email</label>
+                <input type="email" id="login-email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" name="psw" placeholder="Enter your password" required>
+                 <img src="https://i.ibb.co/xLpnpB4/hide-show.png" border="0"onclick="myFunction()">
+                <div class="error" id="login-error"></div>
+            </div>
+            <button type="submit">Login</button>
+            <p class="toggle"><a>Don't have an account?</a> <a  class="toggle-link" href="signup.html">Signup</a></p>
+       </form>
+        </div>
+    </div>
+</div>
+<script>
+//password visibility
+function myFunction() {
+  var x = document.getElementById("login-password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+</body>
+</html>
